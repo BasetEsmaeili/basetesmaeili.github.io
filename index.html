@@ -576,6 +576,54 @@
     .lang-name { font-size: 0.925rem; font-weight: 600; color: var(--text); display: block; }
     .lang-level { font-size: 0.78rem; color: var(--text-muted); display: block; margin-top: 0.1rem; }
 
+    /* ── INTERESTS ── */
+    .interests-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.125rem;
+    }
+
+    .interest-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.375rem 1.25rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .interest-card:hover {
+      border-color: #c7d2fe;
+      box-shadow: 0 4px 20px rgba(79,70,229,0.08);
+    }
+
+    .interest-icon {
+      font-size: 1.35rem;
+      width: 42px;
+      height: 42px;
+      background: var(--accent-bg);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .interest-title {
+      font-size: 0.925rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.35rem;
+    }
+
+    .interest-desc {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
     /* ── FOOTER ── */
     footer { border-top: 1px solid var(--border); padding: 2.5rem 0; background: var(--bg); }
 
@@ -757,6 +805,7 @@
       <li><a href="#skills"          data-i18n="nav_skills">Skills</a></li>
       <li><a href="#recommendations" data-i18n="nav_recommendations">Recommendations</a></li>
       <li><a href="#education"       data-i18n="nav_education">Education</a></li>
+      <li><a href="#interests"       data-i18n="nav_interests">Interests</a></li>
       <li><a href="https://github.com/BasetEsmaeili" target="_blank" rel="noopener">GitHub</a></li>
       <li><button class="nav-lang-btn" id="nav-lang-btn">🌐 <span data-i18n="nav_lang">EN</span></button></li>
       <li><a href="mailto:baset.esmaili0@gmail.com" class="nav-cta" data-i18n="nav_contact">Contact</a></li>
@@ -775,6 +824,7 @@
   <a href="#skills"          data-i18n="nav_skills">Skills</a>
   <a href="#recommendations" data-i18n="nav_recommendations">Recommendations</a>
   <a href="#education"       data-i18n="nav_education">Education</a>
+  <a href="#interests"       data-i18n="nav_interests">Interests</a>
   <a href="https://github.com/BasetEsmaeili" target="_blank" rel="noopener">GitHub ↗</a>
   <a href="mailto:baset.esmaili0@gmail.com" class="mobile-cta" data-i18n="nav_contact">Contact</a>
 </div>
@@ -1280,8 +1330,75 @@
       </div>
       <div class="lang-item">
         <span class="lang-name" data-i18n="lng_persian">Persian</span>
-        <span class="lang-level" data-i18n="lng_native">Native or bilingual proficiency</span>
+        <span class="lang-level" data-i18n="lng_persian_lvl">Professional working proficiency</span>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTERESTS -->
+<section id="interests">
+  <div class="container">
+    <p class="section-label" data-i18n="label_interests">Beyond the Code</p>
+    <h2 class="section-title" data-i18n="title_interests">Interests & Hobbies</h2>
+    <div class="interests-grid">
+
+      <div class="interest-card">
+        <div class="interest-icon">📚</div>
+        <div class="interest-body">
+          <h3 class="interest-title" data-i18n="int_reading_title">Reading & Poetry</h3>
+          <p class="interest-desc" data-i18n="int_reading_desc">Few things match the quiet pleasure of a good book. I read widely — from technical writing to literature and philosophy — but it is poetry that moves me most. Kurdish poets in particular carry a depth of emotion and cultural richness that I never tire of.</p>
+        </div>
+      </div>
+
+      <div class="interest-card">
+        <div class="interest-icon">🚀</div>
+        <div class="interest-body">
+          <h3 class="interest-title" data-i18n="int_tech_title">Tech & Startups</h3>
+          <p class="interest-desc" data-i18n="int_tech_desc">My work is genuinely my hobby. I follow developments in AI, mobile technology, and the startup world with the same enthusiasm others bring to sport. The idea of building something from scratch that solves a real problem never gets old.</p>
+        </div>
+      </div>
+
+      <div class="interest-card">
+        <div class="interest-icon">⛰️</div>
+        <div class="interest-body">
+          <h3 class="interest-title" data-i18n="int_hiking_title">Hiking</h3>
+          <p class="interest-desc" data-i18n="int_hiking_desc">There is something restorative about a long trail. The rhythmic pace, the open air, the absence of notifications — hiking offers a clarity of mind that is hard to find anywhere else.</p>
+        </div>
+      </div>
+
+      <div class="interest-card">
+        <div class="interest-icon">🎵</div>
+        <div class="interest-body">
+          <h3 class="interest-title" data-i18n="int_music_title">Music</h3>
+          <p class="interest-desc" data-i18n="int_music_desc">Music is where I turn when I need to think — or when I need to stop thinking altogether. Kurdish music in particular, with its soulful melodies and deep cultural roots, has a rare ability to bring calm and presence.</p>
+        </div>
+      </div>
+
+      <div class="interest-card">
+        <div class="interest-icon">🌐</div>
+        <div class="interest-body">
+          <h3 class="interest-title" data-i18n="int_lang_title">Language Learning</h3>
+          <p class="interest-desc" data-i18n="int_lang_desc">Every language I learn feels like a new lens through which to see the world. I am drawn to the structure, the nuances, and the way each language reflects the mindset of those who speak it.</p>
+        </div>
+      </div>
+
+      <div class="interest-card">
+        <div class="interest-icon">🏋️</div>
+        <div class="interest-body">
+          <h3 class="interest-title" data-i18n="int_gym_title">Gym</h3>
+          <p class="interest-desc" data-i18n="int_gym_desc">The gym is where I clear my head as much as I build strength. Consistent training teaches the same lesson as good software — discipline and small daily improvements compound into something significant over time.</p>
+        </div>
+      </div>
+
+      <div class="interest-card">
+        <div class="interest-icon">🎮</div>
+        <div class="interest-body">
+          <h3 class="interest-title" data-i18n="int_gaming_title">Gaming & Series</h3>
+          <p class="interest-desc" data-i18n="int_gaming_desc">A well-crafted game or a thoughtfully written series is storytelling at its most immersive. I enjoy both — particularly when a compelling narrative sits at the centre.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1305,7 +1422,7 @@ const translations = {
   en: {
     nav_about: 'About', nav_experience: 'Experience', nav_projects: 'Projects',
     nav_skills: 'Skills', nav_recommendations: 'Recommendations',
-    nav_education: 'Education', nav_contact: 'Contact', nav_lang: 'EN',
+    nav_education: 'Education', nav_interests: 'Interests', nav_contact: 'Contact', nav_lang: 'EN',
     hero_location: 'Tehran, Iran',
     hero_title: 'Android Team Lead · Oddrun',
     hero_bio: 'Android engineer with 8+ years of experience building production-grade mobile apps. Deep expertise in Kotlin, Jetpack Compose, and clean architecture. Currently leading the Android team at Oddrun while shipping open-source tools and exploring AI-powered mobile experiences.',
@@ -1365,46 +1482,62 @@ const translations = {
     lng_english: 'English', lng_english_lvl: 'Professional working proficiency',
     lng_kurdish: 'Kurdish', lng_persian: 'Persian',
     lng_native: 'Native or bilingual proficiency',
+    lng_persian_lvl: 'Professional working proficiency',
+    label_interests: 'Beyond the Code', title_interests: 'Interests & Hobbies',
+    int_reading_title: 'Reading & Poetry',
+    int_reading_desc: 'Few things match the quiet pleasure of a good book. I read widely — from technical writing to literature and philosophy — but it is poetry that moves me most. Kurdish poets in particular carry a depth of emotion and cultural richness that I never tire of.',
+    int_tech_title: 'Tech & Startups',
+    int_tech_desc: 'My work is genuinely my hobby. I follow developments in AI, mobile technology, and the startup world with the same enthusiasm others bring to sport. The idea of building something from scratch that solves a real problem never gets old.',
+    int_hiking_title: 'Hiking',
+    int_hiking_desc: 'There is something restorative about a long trail. The rhythmic pace, the open air, the absence of notifications — hiking offers a clarity of mind that is hard to find anywhere else.',
+    int_music_title: 'Music',
+    int_music_desc: 'Music is where I turn when I need to think — or when I need to stop thinking altogether. Kurdish music in particular, with its soulful melodies and deep cultural roots, has a rare ability to bring calm and presence.',
+    int_lang_title: 'Language Learning',
+    int_lang_desc: 'Every language I learn feels like a new lens through which to see the world. I am drawn to the structure, the nuances, and the way each language reflects the mindset of those who speak it.',
+    int_gym_title: 'Gym',
+    int_gym_desc: 'The gym is where I clear my head as much as I build strength. Consistent training teaches the same lesson as good software — discipline and small daily improvements compound into something significant over time.',
+    int_gaming_title: 'Gaming & Series',
+    int_gaming_desc: 'A well-crafted game or a thoughtfully written series is storytelling at its most immersive. I enjoy both — particularly when a compelling narrative sits at the centre.',
     footer_copy: '© 2026 AbdulBasit (Baset) Esmaeili · Tehran, Iran',
   },
 
   fa: {
     nav_about: 'درباره', nav_experience: 'تجربه', nav_projects: 'پروژه‌ها',
     nav_skills: 'مهارت‌ها', nav_recommendations: 'توصیه‌نامه‌ها',
-    nav_education: 'تحصیلات', nav_contact: 'تماس', nav_lang: 'FA',
+    nav_education: 'تحصیلات', nav_interests: 'علایق', nav_contact: 'تماس', nav_lang: 'FA',
     hero_location: 'تهران، ایران',
-    hero_title: 'سرپرست تیم اندروید · Oddrun',
-    hero_bio: 'بیش از ۸ سال است به‌عنوان مهندس اندروید کار می‌کنم. تخصص اصلی‌ام کاتلین، Jetpack Compose و معماری تمیز است. در حال حاضر سرپرست تیم اندروید Oddrun هستم، ابزارهای متن‌باز می‌سازم و دنیای هوش مصنوعی در موبایل را کاوش می‌کنم.',
-    btn_linkedin: 'لینکدین', btn_github: 'گیت‌هاب', btn_contact: 'تماس بگیرید',
+    hero_title: 'سرپرست تیم Android · Oddrun',
+    hero_bio: 'مهندس Android با بیش از ۸ سال تجربه در ساخت اپلیکیشن‌های موبایل سطح production. تخصص عمیق در Kotlin، Jetpack Compose و Clean Architecture. در حال حاضر رهبری تیم Android در Oddrun را بر عهده دارم، ابزارهای open-source می‌سازم و تجربه‌های موبایل مبتنی بر AI را کاوش می‌کنم.',
+    btn_linkedin: 'LinkedIn', btn_github: 'GitHub', btn_contact: 'تماس بگیرید',
     stat_years: 'سال تجربه', stat_projects: 'پروژه تحویل‌شده',
     stat_recs: 'توصیه‌نامه', stat_skills: 'مهارت فنی',
     label_about: 'درباره', title_about: 'من کی هستم',
-    about_text: 'بیش از ۸ سال است به‌عنوان برنامه‌نویس اندروید کار می‌کنم. حل مسائل پیچیده را دوست دارم، با چالش‌ها کنار می‌آیم و در محیط‌های تیمی به‌خوبی همکاری می‌کنم. کاتلین، جاوا و اندروید SDK ابزارهای اصلی‌ام هستند. در طراحی APIها، SDKها و معماری‌های نرم‌افزاری تجربه دارم و همیشه روی بهینه‌سازی عملکرد تمرکز داشته‌ام. به اصول مهندسی نرم‌افزار پایبند هستم و هدفم ارائه اپلیکیشن‌هایی است که هم باکیفیت باشند و هم مقیاس‌پذیر.',
+    about_text: 'توسعه‌دهنده Android پرتلاش و تیم‌محور با بیش از ۸ سال تجربه. حل‌کننده مسئله با توانایی قوی در مواجهه با چالش‌ها، تطبیق با نیازهای مختلف پروژه و همکاری مؤثر در محیط‌های تیمی. دارای تخصص فنی عمیق در Kotlin، Java و Android SDK. با تجربه در طراحی و توسعه API، SDK و Architecture های اصلی، با تمرکز اثبات‌شده بر بهینه‌سازی performance و کارایی اپلیکیشن. مهارت در طراحی نرم‌افزار در چارچوب مهندسی نرم‌افزار و شیوه‌های صنعتی — متعهد به ارائه اپلیکیشن‌های باکیفیت و scalable.',
     label_experience: 'تجربه', title_experience: 'سابقه کاری',
-    exp_oddrun_meta: 'تمام‌وقت · ۵ سال · تهران، ایران · ترکیبی',
-    exp_diver_meta: 'تمام‌وقت · دورکاری',
-    exp_onsite_meta: 'تمام‌وقت · حضوری',
-    role_team_lead: 'سرپرست تیم اندروید',
-    role_senior_eng: 'مهندس ارشد اندروید',
-    role_senior_dev: 'توسعه‌دهنده ارشد اندروید',
-    role_android_dev: 'توسعه‌دهنده اندروید',
+    exp_oddrun_meta: 'تمام‌وقت · ۵ سال · تهران، ایران · Hybrid',
+    exp_diver_meta: 'تمام‌وقت · Remote',
+    exp_onsite_meta: 'تمام‌وقت · On-site',
+    role_team_lead: 'سرپرست تیم Android',
+    role_senior_eng: 'مهندس ارشد Android',
+    role_senior_dev: 'توسعه‌دهنده ارشد Android',
+    role_android_dev: 'توسعه‌دهنده Android',
     label_projects: 'پروژه‌ها', title_projects: 'آنچه ساخته‌ام',
     proj_robot_name: 'ربات خودکار رزرو نوبت',
-    proj_renus_desc: 'ابزار هوشمند برای کمک به نوشتار به زبان کردی با هوش مصنوعی.',
-    proj_aidict_desc: 'اپلیکیشن متن‌باز اندروید برای یادگیری واژگان. از ترکیب OpenAI و DeepSeek با لغت‌نامه‌های معتبر استفاده می‌کند تا تعریف، مترادف، مثال و ریشه کلمات را یکجا نشان دهد. یکپارچه‌سازی با Anki، جستجو از روی عکس و مدل‌های AI قابل تنظیم. ۱۰ نسخه منتشرشده.',
-    proj_robot_desc: 'اپلیکیشن چندسکویی با Jetpack Compose و Kotlin Multiplatform که رزرو نوبت را خودکار می‌کند — وقت آزاد را پیدا کرده و بر اساس اطلاعات وارد‌شده رزرو می‌کند.',
-    proj_hiats_desc: 'سیستم کامیون خودران الهام‌گرفته از نظریه ذهن — رفتار دیگران را از روی بردار ذهنی‌شان تحلیل می‌کند، نه فقط از روی حرکت. محصول SaaS شرکت NOROn، برخاسته از دانشگاه صنعتی شریف.',
-    proj_nazdika_desc: 'شبکه اجتماعی ایرانی توسعه‌یافته در Oddrun با کاتلین، Jetpack Compose، Firebase و CI/CD.',
-    proj_diver_desc: 'کیف پول الکترونیکی اندروید با قابلیت‌های بلادرنگ از طریق Socket.io، ساخته‌شده در دوران کار در Diver.',
-    proj_tlift_desc: 'مجموعه اپلیکیشن‌های مدیریتی برای شرکت آسانسور Tavanmand که کل فرآیندهای عملیاتی را پوشش می‌دهد.',
-    proj_mahabad_e_desc: 'اپلیکیشن اندروید برای متخصصان MahabadBama که به کارشناسان میدانی امکان مدیریت کار و ارتباط بلادرنگ می‌دهد.',
-    proj_book_desc: 'اپلیکیشن کتاب آموزشی فارسی برای کودکان در کافه‌بازار با خرید درون‌برنامه‌ای، نمایش تبلیغات و محتوای آفلاین در SQLite.',
-    proj_mahabad_c_desc: 'اپلیکیشن اندروید سمت مشتری برای MahabadBama با معماری MVP، نقشه، به‌روزرسانی لحظه‌ای و خرید درون‌برنامه‌ای.',
-    label_skills: 'مهارت‌ها', title_skills: 'تخصص‌های فنی',
-    sg_ai: 'هوش مصنوعی و یادگیری ماشین', sg_leadership: 'رهبری و مدیریت',
-    sg_langs: 'زبان‌های برنامه‌نویسی', sg_android: 'پلتفرم اندروید',
-    sg_arch: 'معماری نرم‌افزار', sg_async: 'برنامه‌نویسی ناهمزمان و شبکه',
-    sg_testing: 'تست و ابزارها', sg_pro: 'مهارت‌های عمومی',
+    proj_renus_desc: 'یک اپلیکیشن قدرتمند AI برای کمک به نوشتار به زبان کردی.',
+    proj_aidict_desc: 'اپلیکیشن open-source Android برای تقویت یادگیری واژگان با ترکیب OpenAI و DeepSeek با منابع لغت‌نامه‌ای معتبر. شامل یکپارچه‌سازی Anki، جستجوی کلمه از روی تصویر و model های AI قابل تنظیم. ۱۰ نسخه منتشرشده.',
+    proj_robot_desc: 'اپلیکیشن cross-platform با Jetpack Compose و Kotlin Multiplatform برای خودکارسازی رزرو نوبت — به‌طور خودکار زمان‌های آزاد را پیدا کرده و بر اساس ترجیحات کاربر رزرو می‌کند.',
+    proj_hiats_desc: 'سیستم کامیون خودران الهام‌گرفته از سیستم‌های شناختی انسان و Theory of Mind — رفتار دیگران را بر اساس بردارهای ذهنی تفسیر می‌کند، نه تنها پیش‌بینی حرکت. محصول SaaS شرکت NOROn، برخاسته از دانشگاه صنعتی شریف.',
+    proj_nazdika_desc: 'پلتفرم شبکه اجتماعی ایرانی توسعه‌یافته در Oddrun، ساخته‌شده با Kotlin، Jetpack Compose و مجموعه کاملی از library های مدرن Android شامل CI/CD و Firebase.',
+    proj_diver_desc: 'اپلیکیشن Android کیف‌پول پرداخت الکترونیک با قابلیت‌های real-time از طریق Socket.io، توسعه‌یافته در دوران کار در Diver.',
+    proj_tlift_desc: 'اپلیکیشن‌های مدیریتی شرکت آسانسور توسعه‌یافته برای Tavanmand، پوشش‌دهنده فرآیندهای عملیاتی کسب‌وکارهای خدمات آسانسور.',
+    proj_mahabad_e_desc: 'اپلیکیشن Android سمت متخصص برای MahabadBama، به متخصصان میدانی امکان مدیریت کارها و ارتباط real-time می‌دهد.',
+    proj_book_desc: 'اپلیکیشن آموزشی کتاب فارسی برای کودکان منتشرشده در Cafe Bazaar، با in-app purchase، یکپارچه‌سازی تبلیغات و محتوای offline ذخیره‌شده در SQLite.',
+    proj_mahabad_c_desc: 'اپلیکیشن Android سمت مشتری توسعه‌یافته در MahabadBama، ساخته‌شده با معماری MVP و stack کامل مدرن شامل نقشه، به‌روزرسانی real-time و in-app purchase.',
+    label_skills: 'مهارت‌ها', title_skills: 'تخصص فنی',
+    sg_ai: 'AI و Machine Learning', sg_leadership: 'رهبری و مدیریت',
+    sg_langs: 'زبان‌های برنامه‌نویسی', sg_android: 'پلتفرم Android',
+    sg_arch: 'Architecture و طراحی', sg_async: 'Async و شبکه',
+    sg_testing: 'Testing و ابزارها', sg_pro: 'حرفه‌ای',
     label_rec: 'توصیه‌نامه‌ها', title_rec: 'همکاران چه می‌گویند',
     rec1_ctx: 'شهریور ۱۴۰۳ · مدیر مستقیم بود',
     rec2_ctx: 'مرداد ۱۴۰۳ · شاگرد',
@@ -1421,7 +1554,7 @@ const translations = {
     edu1_school: 'دانشگاه آزاد اسلامی',
     edu1_degree: 'کارشناسی ارشد، مهندسی نرم‌افزار',
     edu1_dates: 'شهریور ۱۴۰۳ – اکنون',
-    edu2_school: 'آموزشکده فنی و حرفه‌ای شمس‌آباد',
+    edu2_school: 'آموزشکده فنی و حرفه‌ای شمس‌پور',
     edu2_degree: 'کارشناسی، مهندسی نرم‌افزار',
     edu2_dates: 'شهریور ۱۴۰۰ – مرداد ۱۴۰۲',
     edu3_school: 'دانشگاه فنی و حرفه‌ای',
@@ -1431,46 +1564,62 @@ const translations = {
     lng_english: 'انگلیسی', lng_english_lvl: 'سطح کاری حرفه‌ای',
     lng_kurdish: 'کردی', lng_persian: 'فارسی',
     lng_native: 'زبان مادری',
-    footer_copy: '© ۱۴۰۵ باست اسماعیلی · تهران، ایران',
+    lng_persian_lvl: 'سطح کاری حرفه‌ای',
+    label_interests: 'فراتر از کد', title_interests: 'علایق و سرگرمی‌ها',
+    int_reading_title: 'مطالعه و شعر',
+    int_reading_desc: 'کمتر چیزی با لذت آرام یک کتاب خوب برابری می‌کند. دامنه مطالعه‌ام گسترده است — از نوشته‌های فنی تا ادبیات و فلسفه — اما این شعر است که بیشتر از همه تکانم می‌دهد. به‌خصوص شاعران کرد که عمق احساسی و غنای فرهنگی کم‌نظیری دارند که هرگز از آن سیر نمی‌شوم.',
+    int_tech_title: 'فناوری و استارتاپ',
+    int_tech_desc: 'کارم واقعاً سرگرمی‌ام هم هست. تحولات AI، فناوری موبایل و دنیای استارتاپ را با همان اشتیاقی دنبال می‌کنم که دیگران ورزش را. ایده ساختن چیزی از صفر که مشکل واقعی را حل کند هرگز کهنه نمی‌شود.',
+    int_hiking_title: 'کوهنوردی',
+    int_hiking_desc: 'یک مسیر طولانی چیز تازه‌کننده‌ای در خود دارد. ریتم قدم‌ها، هوای آزاد، دوری از اعلان‌ها — کوهنوردی نوعی صراحت ذهنی می‌آورد که جای دیگری سخت می‌توان یافت.',
+    int_music_title: 'موسیقی',
+    int_music_desc: 'موسیقی جایی است که وقتی نیاز به فکر کردن دارم — یا وقتی می‌خواهم فکر کردن را کنار بگذارم — به آن پناه می‌برم. موسیقی کردی به‌خصوص، با ملودی‌های روح‌نواز و ریشه‌های فرهنگی عمیقش، توانایی نادری برای آوردن آرامش و حضور ذهن دارد.',
+    int_lang_title: 'یادگیری زبان',
+    int_lang_desc: 'هر زبانی که یاد می‌گیرم احساس می‌کنم عدسی تازه‌ای برای دیدن دنیا پیدا کرده‌ام. ساختار، ظرافت‌ها و روشی که هر زبان طرز تفکر گویندگانش را منعکس می‌کند مرا مجذوب می‌کند.',
+    int_gym_title: 'باشگاه',
+    int_gym_desc: 'باشگاه جایی است که هم ذهنم را پاک می‌کنم و هم قدرت می‌سازم. تمرین منظم همان درسی را می‌دهد که نرم‌افزار خوب — نظم و پیشرفت‌های کوچک روزانه در طول زمان به چیز قابل توجهی تبدیل می‌شوند.',
+    int_gaming_title: 'بازی و سریال',
+    int_gaming_desc: 'یک بازی خوش‌ساخت یا یک سریال نوشته‌شده با دقت، داستان‌گویی در غنی‌ترین شکل خود است. هر دو را دوست دارم — به‌خصوص وقتی روایتی قوی در مرکز آن باشد.',
+    footer_copy: '© ۱۴۰۵ عبدالباسط (باست) اسماعیلی · تهران، ایران',
   },
 
   ku: {
-    nav_about: 'دەربارەی', nav_experience: 'تێجربە', nav_projects: 'پرۆژەکان',
+    nav_about: 'دەربارەی', nav_experience: 'ئەزموون', nav_projects: 'پرۆژەکان',
     nav_skills: 'شارەزاییەکان', nav_recommendations: 'پێشنیارەکان',
-    nav_education: 'خوێندن', nav_contact: 'پەیوەندی', nav_lang: 'KU',
+    nav_education: 'خوێندن', nav_interests: 'حەزەکان', nav_contact: 'پەیوەندی', nav_lang: 'KU',
     hero_location: 'تاران، ئێران',
-    hero_title: 'سەرۆکی تیمی ئەندروید · Oddrun',
-    hero_bio: 'زیاتر لە ٨ ساڵە کە وەک ئەندازیاری ئەندروید کار دەکەم. شارەزایی قووڵم لە کۆتلین، Jetpack Compose و ئەندازیاری پاک. ئێستا سەرۆکی تیمی ئەندروید لە Oddrunم، لەگەڵ دروستکردنی ئامرازی سەرچاوەی کراوە و کاوێشی دنیای هوشی دەستکرد لە مۆبایل.',
-    btn_linkedin: 'لینکدین', btn_github: 'گیتهەب', btn_contact: 'پەیوەندیم پێوە بکە',
-    stat_years: 'ساڵ تێجربە', stat_projects: 'پرۆژەی بەرکەوتوو',
-    stat_recs: 'پێشنیار', stat_skills: 'شارەزایی تەکنیکی',
+    hero_title: 'سەرۆکی تیمی Android · Oddrun',
+    hero_bio: 'ئەندازیاری Android لەگەڵ زیاتر لە ٨ ساڵ ئەزموون لە دروستکردنی app-ی موبایل لە ئاستی production. شارەزایی قووڵ لە Kotlin، Jetpack Compose و Clean Architecture. ئێستا رێبەرایەتی تیمی Android لە Oddrun دەکەم، open-source tools دەدەم و تجربەکانی موبایل بە AI بەهێزکراو دەکاوێمەوە.',
+    btn_linkedin: 'LinkedIn', btn_github: 'GitHub', btn_contact: 'پەیوەندیم پێوە بکە',
+    stat_years: 'ساڵ ئەزموون', stat_projects: 'پرۆژەی بەرکەوتوو',
+    stat_recs: 'پێشنیار', stat_skills: 'شارەزایی فنی',
     label_about: 'دەربارەی', title_about: 'من کێم',
-    about_text: 'زیاتر لە ٨ ساڵە کە وەک بەرنامەنووسی ئەندروید کار دەکەم. حەزم لە چارەسەرکردنی کێشە هەیە، لەگەڵ دژواریەکان دەتووشم و لە کاری تیمی باشم. کۆتلین، جاڤا و ئەندروید SDK ئامرازە سەرەکییەکانمن. تێجربەم هەیە لە دیزاینکردنی API، SDK و ئەندازیارییەکان، بەردەوام تەرکیزم لەسەر باشکردنی کارایی ئەپلیکەیشنەکانمە. پابەندم بە ئەندازیاری نەرمەواڵە و ئامرازە پیشەسازییەکان — مەبەستم دابینکردنی ئەپلیکەیشنی باشکواڵیت و فراوانبوانەیە.',
-    label_experience: 'تێجربە', title_experience: 'مێژووی کار',
-    exp_oddrun_meta: 'کاری تەواو · ٥ ساڵ · تاران، ئێران · تێکەڵ',
-    exp_diver_meta: 'کاری تەواو · دوورکاری',
-    exp_onsite_meta: 'کاری تەواو · سەر شوێن',
-    role_team_lead: 'سەرۆکی تیمی ئەندروید',
-    role_senior_eng: 'ئەندازیاری باڵای ئەندروید',
-    role_senior_dev: 'بەرنامەنووسی باڵای ئەندروید',
-    role_android_dev: 'بەرنامەنووسی ئەندروید',
-    label_projects: 'پرۆژەکان', title_projects: 'چی دروستم کردووە',
+    about_text: 'بەرنامەنووسی Android کە کۆشایە و تیم‌ئاڕاستەیە لەگەڵ زیاتر لە ٨ ساڵ ئەزموون. چارەسەرکردنی کێشە لەگەڵ توانایی بەهێز بۆ دانانی پەنجە بە دژواریەکان، گونجاندن لەگەڵ پێداویستییەکانی جۆراوجۆری پرۆژە، و کارکردنی کاریگەر لە ژینگەی تیم. شارەزایی فنی قووڵ لە Kotlin، Java و Android SDK. ئەزموون لە دیزاین و پەرەپێدانی API، SDK و Architecture ی سەرەکی، لەگەڵ تەرکیزی ئیسپاتکراو بەسەر باشکردنی performance و کارایی app. شارەزا لە دیزاینی نەرمەواڵە لە چوارچێوەی ئەندازیاری نەرمەواڵە و شێوازی پیشەسازی — پابەندم بە دابینکردنی app ی کواڵیتی بەرز و scalable.',
+    label_experience: 'ئەزموون', title_experience: 'مێژووی کار',
+    exp_oddrun_meta: 'کاری تەواو · ٥ ساڵ · تاران، ئێران · Hybrid',
+    exp_diver_meta: 'کاری تەواو · Remote',
+    exp_onsite_meta: 'کاری تەواو · On-site',
+    role_team_lead: 'سەرۆکی تیمی Android',
+    role_senior_eng: 'ئەندازیاری باڵای Android',
+    role_senior_dev: 'بەرنامەنووسی باڵای Android',
+    role_android_dev: 'بەرنامەنووسی Android',
+    label_projects: 'پرۆژەکان', title_projects: 'ئەوەی دروستم کردووە',
     proj_robot_name: 'رۆبۆتی خۆکاری حجزی کات',
-    proj_renus_desc: 'ئامرازێکی زیرەک بۆ یارمەتیدانی نووسین بە زمانی کوردی بە هوشی دەستکرد.',
-    proj_aidict_desc: 'ئەپلیکەیشنی ئەندروید کە سەرچاوەی کراوەیە و فێربوونی وشەکان بەهێز دەکات. OpenAI و DeepSeek لەگەڵ فەرهەنگی پشت‌پێدەکرێت تێکەڵ دەکات بۆ نیشاندانی پێناسە، هاوماناکان، نموونە و ڕەگی وشە. یەکگرتنەوە لەگەڵ Anki، گەڕانی وشە لەسەر وێنە و مۆدێلی AI ڕێکخستنی لەخۆدەگرێت. ١٠ وەشان بەرکەوتوون.',
-    proj_robot_desc: 'ئەپلیکەیشنی زۆر-پلاتفۆرم لەگەڵ Jetpack Compose و Kotlin Multiplatform کە حجزی کات خۆکار دەکات — کاتی بەتاڵ دەبینێتەوە و بەپێی زانیارییەکانی بەکارهێنەر حجز دەکات.',
-    proj_hiats_desc: 'سیستەمی تریلەی خۆبەخۆ کە گەرانەوەی نەزەریەتی دەماغ دەکات — کاروباری کەسانی تر لەسەر بنچینەی ڤێکتۆری مەنتاڵیان شیکاری دەکات، نەک تەنها جووڵەکانیان. بەرهەمی SaaS لە کۆمپانیای NOROn کە لە زانکۆی تەکنیکی شەریف دامەزراوە.',
-    proj_nazdika_desc: 'تۆڕی کۆمەڵایەتی ئێرانی کە لە Oddrun پەرەی پێدراوە، دروستکراوە بە کۆتلین، Jetpack Compose، Firebase و CI/CD.',
-    proj_diver_desc: 'کیسەی ئەلیکترۆنیکی ئەندروید لەگەڵ توانایی کاتی ڕاستەقینە لە ڕێگەی Socket.io، پەرەی پێدراوە لە کاتی کارکردن لە Diver.',
-    proj_tlift_desc: 'ئەپلیکەیشنەکانی بەڕێوەبردنی کۆمپانیای ئاسانسۆر بۆ Tavanmand کە هەموو کارۆبارەکانی خزمەتگوزاری ئاسانسۆری دەپۆشێتەوە.',
-    proj_mahabad_e_desc: 'ئەپلیکەیشنی ئەندروید بۆ متخصصانی MahabadBama کە کارشناسانی مەیدانی دەتوانن کارەکانیان بەڕێوەببەن و بە کاتی ڕاستەقینە پەیوەندی بکەن.',
-    proj_book_desc: 'ئەپلیکەیشنی کتێبی فێرکاری فارسی بۆ منداڵان لە Cafe Bazaar، لەگەڵ کڕینی ناو-ئەپ، ڕیکلام و ناوەڕۆکی ئۆفلاین لە SQLite.',
-    proj_mahabad_c_desc: 'ئەپلیکەیشنی ئەندروید بۆ کڕیارانی MahabadBama لەگەڵ ئەندازیاری MVP، نەخشە، نوێکردنەوەی کاتی ڕاستەقینە و کڕینی ناو-ئەپ.',
-    label_skills: 'شارەزاییەکان', title_skills: 'شارەزایی تەکنیکی',
-    sg_ai: 'هوشی دەستکرد و فێربوونی مەکینەیی', sg_leadership: 'سەرۆکایەتی و بەڕێوەبردن',
-    sg_langs: 'زمانەکانی بەرنامەنووسی', sg_android: 'پلاتفۆرمی ئەندروید',
-    sg_arch: 'ئەندازیاری نەرمەواڵە', sg_async: 'بەرنامەنووسی ناهاوکات و تۆڕسازی',
-    sg_testing: 'تێستکردن و ئامرازەکان', sg_pro: 'شارەزایی گشتی',
+    proj_renus_desc: 'app ێکی بەهێزی AI بۆ یارمەتیدانی نووسین بە زمانی کوردی.',
+    proj_aidict_desc: 'app ی open-source ی Android کە فێربوونی وشەکان بەهێز دەکات بە تێکەڵکردنی OpenAI و DeepSeek لەگەڵ سەرچاوەی فەرهەنگی پشتەوان. تایبەتمەندییەکانی: یەکگرتنەوەی Anki، گەڕانی وشە بە وێنە و model ی AI ی رێکخستنی. ١٠ وەشان بەرکەوتووە.',
+    proj_robot_desc: 'app ی cross-platform لەگەڵ Jetpack Compose و Kotlin Multiplatform بۆ خۆکارکردنی حجزی کات — بە خۆی کاتی بەتاڵ دەبینێتەوە و بەپێی ئارەزووی بەکارهێنەر حجز دەکات.',
+    proj_hiats_desc: 'سیستەمی تریلەی خۆکار الهام‌گرتوو لە سیستەمی کۆگنیتیڤی مرۆڤ و Theory of Mind — کاروباری کەسانی تر لەسەر بنچینەی ڤێکتۆری مەنتاڵی شیکاری دەکات، نەک تەنها پێشبینی جووڵە. بەرهەمی SaaS لە NOROn، دامەزراوە لە زانکۆی تەکنیکی شەریف.',
+    proj_nazdika_desc: 'platform ی شبکەی کۆمەڵایەتی ئێرانی پەرەپێدراوە لە Oddrun، دروستکراوە بە Kotlin، Jetpack Compose و کتێبخانەکانی نوێی Android لەگەڵ CI/CD و Firebase.',
+    proj_diver_desc: 'app ی Android ی جزدان-ی پارەدانی ئەلیکترۆنی لەگەڵ توانای real-time لەڕێگەی Socket.io، پەرەپێدراوە لە کاتی کارکردن لە Diver.',
+    proj_tlift_desc: 'app ەکانی بەڕێوەبردنی کۆمپانیای ئاسانسۆر بۆ Tavanmand، پوشاندنی کارۆبارەکانی خزمەتگوزاری ئاسانسۆر.',
+    proj_mahabad_e_desc: 'app ی Android ی لای متخصص بۆ MahabadBama، پیشەکاری مەیدانی دەتوانن ئیشەکانیان بەڕێوەببەن و بە real-time پەیوەندی بکەن.',
+    proj_book_desc: 'app ی کتێبی فێرکاری فارسی بۆ منداڵان بەرکەوتووە لە Cafe Bazaar، لەگەڵ in-app purchase، یەکگرتنەوەی ڕیکلام و ناوەڕۆکی offline ذخیرەکراو لە SQLite.',
+    proj_mahabad_c_desc: 'app ی Android ی لای کڕیار بۆ MahabadBama، دروستکراوە لەگەڵ Architecture ی MVP و stack ی نوێی تەواو لەگەڵ نەخشە، نوێکردنەوەی real-time و in-app purchase.',
+    label_skills: 'شارەزاییەکان', title_skills: 'شارەزایی فنی',
+    sg_ai: 'AI و Machine Learning', sg_leadership: 'رێبەرایەتی و بەڕێوەبردن',
+    sg_langs: 'زمانەکانی بەرنامەنووسی', sg_android: 'Platform ی Android',
+    sg_arch: 'Architecture و دیزاین', sg_async: 'Async و تۆڕسازی',
+    sg_testing: 'Testing و ئامرازەکان', sg_pro: 'پیشەیی',
     label_rec: 'پێشنیارەکان', title_rec: 'هاوکارەکان چی دەڵێن',
     rec1_ctx: 'ئەیلووڵی ٢٠٢٤ · بەرپرسی ڕاستەوخۆی بوو',
     rec2_ctx: 'تەمموزی ٢٠٢٤ · قوتابی',
@@ -1487,7 +1636,7 @@ const translations = {
     edu1_school: 'زانکۆی ئازادی ئیسلامی',
     edu1_degree: 'ماستەر، ئەندازیاری نەرمەواڵەی کۆمپیوتەر',
     edu1_dates: 'ئەیلووڵی ٢٠٢٤ – ئێستا',
-    edu2_school: 'کۆلێجی تەکنیکی و پیشەیی شەمسئاباد',
+    edu2_school: 'کۆلێجی تەکنیکی و پیشەیی شەمسی‌پوور',
     edu2_degree: 'بەکالۆریۆس، ئەندازیاری نەرمەواڵەی کۆمپیوتەر',
     edu2_dates: 'ئەیلووڵی ٢٠٢١ – تەمموزی ٢٠٢٣',
     edu3_school: 'زانکۆی تەکنیکی و پیشەیی',
@@ -1497,7 +1646,23 @@ const translations = {
     lng_english: 'ئینگلیزی', lng_english_lvl: 'ئاستی کاری پیشەیی',
     lng_kurdish: 'کوردی', lng_persian: 'فارسی',
     lng_native: 'زمانی دایک',
-    footer_copy: '© ٢٠٢٦ بەست ئیسماعیلی · تاران، ئێران',
+    lng_persian_lvl: 'ئاستی کاری پیشەیی',
+    label_interests: 'دەرەوەی کۆدەکە', title_interests: 'حەزەکان و سەرگەرمییەکان',
+    int_reading_title: 'خوێندنەوە و شیعر',
+    int_reading_desc: 'کەم شتێک لەگەڵ ئارامی خوێندنی کتێبێکی باش بەراورد دەبێت. فراوان دەخوێنمەوە — لە نووسینی فنی تا ئەدەبیات و فەلسەفە — بەلام شیعرە کە زیاتر دەمتکاتەوە. شاعیرانی کوردی بەتایبەت قووڵایی هەستی و دەوڵەمەندی فەرهەنگی تایبەتیان هەیە کە هەرگیز لێی تێر نابم.',
+    int_tech_title: 'تەکنەلۆژیا و Startup',
+    int_tech_desc: 'کارەکەم بە ڕاستی سەرگەرمییەکەمیشە. گەشەی AI، تەکنەلۆژیای موبایل و دنیای startup بە هەمان هاندانی کەسانی تر کە وەرزش دەبینن دەچاودێریم. ئیدێی دروستکردنی شتێک لە سفر کە کێشەیەکی ڕاستەقینە چارەسەر دەکات هەرگیز کۆنە نابێتەوە.',
+    int_hiking_title: 'چیاگەشتی',
+    int_hiking_desc: 'شتێکی چاکساز هەیە لە ڕێگاکانی درێژ. ریتمی هەنگاوەکان، هەوای ئازاد، دوری لە ئاگادارکردنەوەکان — چیاگەشتی جۆرێک لە ڕوونی دەرووناڵی دەبەخشێت کە شوێنی تر سەختە بدۆزیتەوە.',
+    int_music_title: 'موسیقا',
+    int_music_desc: 'موسیقا ئەوێیە کە دەمچێتێ کە پێویستم بە بیرکردنەوەیە — یان کە دەمەوێت هزرکردنم تەواو بوەستێنم. موسیقای کوردی بەتایبەت، لەگەڵ مەلۆدییەکانی ڕووحبەخش و ڕەگەزی فەرهەنگی قووڵەکەیەوە، توانایی تایبەتی هەیە بۆ ئارامی و ئاسوودەیی.',
+    int_lang_title: 'فێربوونی زمان',
+    int_lang_desc: 'هەر زمانێک فێر دەبم وەک چاوپوشێکی نوێی بینینی دنیا هەستی پێدەکەم. ساختار، باریکەوتنەکان، و ئەو شێوەی کە هەر زمانێک تەرزی بیرکردنی خاوەنەکانی دەرئاومێنێت، سەرمی دەچێت.',
+    int_gym_title: 'Gym',
+    int_gym_desc: 'Gym ئەوێیە کە هەم مێشکم پاک دەکەمەوە و هەم هێز دروست دەکەم. تەمرینی بەردەوام هەمان وانەی نەرمەواڵەی باش دەڵێت — نیزام و پێشکەوتنی بچووکی ڕۆژانە لە کاتێکدا بە شتێکی گرنگ دەبێتە.',
+    int_gaming_title: 'Gaming و Serial',
+    int_gaming_desc: 'یارییەکی باش‌دروستکراو یان serial ێکی لەسەر بیردراو، داستانگوتنە لە باشترین شێوەیەکی خۆیدا. هەر دووکیانم حەزە — بەتایبەت کاتێک روایەتێکی بەهێز لە نهاویدا بێت.',
+    footer_copy: '© ٢٠٢٦ عبدالباسط (باست) ئیسماعیلی · تاران، ئێران',
   }
 
 };
